@@ -14,9 +14,11 @@ body {
   font-weight: 300;
   line-height: 1.6;
   color: #f7f7f7;
-  background: linear-gradient(to bottom, #3F7B70, #113C4A); }
+  background: linear-gradient(to bottom, #3F7B70, #113C4A);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; }
 
-highlighted text
 ::selection {
   background-color: #f7f7f7;
   color: #265A5C; }
@@ -25,15 +27,23 @@ highlighted text
   height: 100%;
   width: 100%; }
 
-.logo__main {
-  font-size: 7.5rem;
-  font-weight: 700;
-  background: linear-gradient(to bottom, #EE2B47, #D1F386);
-  -webkit-background-clip: text;
-  color: transparent; }
-.logo__sub {
-  font-size: 5rem;
-  font-weight: 700;
-  color: #ddd; }
+.logo {
+  background-color: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  transform: skewX(-18deg); }
+  .logo > * {
+    transform: skewX(18deg); }
+  .logo__main {
+    font-size: 9.5rem;
+    font-weight: 900;
+    letter-spacing: 1.5rem;
+    background: linear-gradient(to bottom, #EE2B47, #D1F386);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .logo__sub {
+    font-size: 4.5rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    color: #f7f7f7; }
 
 /*# sourceMappingURL=style.css.map */

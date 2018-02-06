@@ -2,7 +2,8 @@ const form = document.querySelector('.form');
 const input = document.querySelector('.search__input');
 const results = document.querySelector('.results');
 
-document.getElementById('results').style.display = 'none';
+// Change loader to all CSS
+// document.getElementById('loader').style.display = 'none';
 
 function fetchData(e) {
   // console.log('fetching data...'); // for dev only, DELETE
@@ -28,7 +29,7 @@ function fetchData(e) {
 
 function displayResults(data) {
   // append links to dom (when promise fullfilled
-  const html = data[1].map((element, i) => {
+  /* const html = data[1].map((element, i) => {
     return (`
       <li class="results__item">
         <a class="results__link" href=${data[3][i]}>
@@ -37,11 +38,23 @@ function displayResults(data) {
         </a>
       </li>
     `);
-  }).join('');
+  }).join(''); */
+
+  let html = '';
+
+  data[1].forEach((element, i) => {
+    html += `
+      <li class="results__item">
+        <a class="results__link" href=${data[3][i]}>
+          <h2 class="results__title">${element}</h2>
+          <p class="results__text">${data[2][i]}</p>
+        </a>
+      </li>
+    `;
+  });
   // append lis
   results.innerHTML = html;
   // slide in links section
-
 }
 
 // add "clear" option to remove links, clear input and reposition display/inputs
