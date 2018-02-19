@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="dist/styles.css">
   <!-- insert favicon links here -->
 
   <title>kWiki Search</title>
@@ -14,26 +15,27 @@
 
 <body>
   <main class="container">
+    <!-- Header Section -->
     <header class="header">
-    
+
       <div class="logo">
         <h1 class="logo__main">
           <span class="logo__sub">k</span>WIKI</h1>
         <h2 class="logo__sub">search</h2>
       </div>
-    
+
       <input type="text" name="search" class="search__input" placeholder="search wikipedia">
       <button class="btn search__btn">Search</button>
       <!-- <button class="btn search__random-btn">Random Article</button> -->
       <a href="https://en.wikipedia.org/wiki/Special:Random" class="btn search__random-btn">Random Article</a>
     </header>
-    
+
+    <!-- Content Section -->
     <section class="content">
       <div id="loader">
-        <!-- <img src="img/loading.gif" alt=""> -->
         <h3>loading...</h3>
       </div>
-    
+
       <ul class="results">
         <li class="results__item">
           <a class="results__link" href="http://#">
@@ -44,11 +46,12 @@
         <li class="results__item">
           <a class="results__link" href="http://#">
             <h2 class="results__title">Link title</h2>
-            <p class="results__text">voluptatem id, aperiam nobis. Voluptate illo nihil quibusdam necessitatibus, molestias non eaque ipsam quisquam explicabo
-              officiis assum</p>
+            <p class="results__text">voluptatem id, aperiam nobis. Voluptate illo nihil quibusdam necessitatibus, molestias non eaque ipsam quisquam
+              explicabo officiis assum</p>
           </a>
         </li>
       </ul>
+
     </section>
   </main>
 
@@ -57,6 +60,7 @@
     <a class="made-by__link" href="http://www.keithrodriguez.me/">Keith Rodriguez</a>
   </footer> -->
 
-  <script src="js/index.js"></script>
+  <script src="dist/bundle.js"></script>
 </body>
+
 </html>

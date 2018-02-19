@@ -9,3 +9,5 @@ class Wiki {
     return resData;
   }
 }
+
+export const wiki = new Wiki();
