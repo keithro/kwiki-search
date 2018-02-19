@@ -14,18 +14,10 @@ body {
   font-weight: 300;
   line-height: 1.6;
   color: #f7f7f7;
-  background: linear-gradient(to bottom, #3F7B70, #113C4A);
+  background: linear-gradient(to bottom, #3A6073, #16222a);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh; }
-
-::selection {
-  background-color: #f7f7f7;
-  color: #265A5C; }
-
-.header {
-  height: 100%;
-  width: 100%; }
 
 .logo {
   background-color: rgba(255, 255, 255, 0.2);
@@ -37,7 +29,7 @@ body {
     font-size: 9.5rem;
     font-weight: 900;
     letter-spacing: 1.5rem;
-    background: linear-gradient(to bottom, #EE2B47, #D1F386);
+    background: linear-gradient(to bottom, #FF3366, #BA265D);
     -webkit-background-clip: text;
     color: transparent; }
   .logo__sub {
@@ -46,4 +38,19 @@ body {
     letter-spacing: 3.5rem;
     color: #f7f7f7; }
 
-/*# sourceMappingURL=style.css.map */
+.container {
+  display: grid;
+  grid-template-columns: [full-start] 1fr [center-start] minmax(min-content, 2fr) [center-end] 1fr [full-end];
+  grid-template-rows: min-content 1fr;
+  grid-gap: 2rem; }
+
+.header {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3; }
+  .header--full-width {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1; }
+
+.content {
+  grid-row: 2 / span 1;
+  grid-column: 1 / -1; }

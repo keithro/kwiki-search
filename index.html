@@ -13,43 +13,44 @@
 </head>
 
 <body>
-  <header class="header full-window">
-
-    <div class="logo">
-      <h1 class="logo__main"><span class="logo__sub">k</span>WIKI</h1>
-      <h2 class="logo__sub">search</h2>
-    </div>
-
-    <form class="form">
+  <main class="container">
+    <header class="header">
+    
+      <div class="logo">
+        <h1 class="logo__main">
+          <span class="logo__sub">k</span>WIKI</h1>
+        <h2 class="logo__sub">search</h2>
+      </div>
+    
       <input type="text" name="search" class="search__input" placeholder="search wikipedia">
       <button class="btn search__btn">Search</button>
-    </form>
-    <p>or</p>
-    <!-- <button class="btn search__random-btn">Random Article</button> -->
-    <a href="https://en.wikipedia.org/wiki/Special:Random" class="btn search__random-btn">Random Article</a>
-  </header>
-
-  <section class="content">
-    <div id="loader">
-      <!-- <img src="img/loading.gif" alt=""> -->
-      <h3>loading...</h3>
-    </div>
-
-    <ul class="results">
-      <!-- <li class="results__item">
-        <a class="results__link" href="http://#">
-          <h2 class="results__title">Link title</h2>
-          <p class="results__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit perspiciatis nulla voluptatem reprehenderit</p>
-        </a>
-      </li>
-      <li class="results__item">
-        <a class="results__link" href="http://#">
-          <h2 class="results__title">Link title</h2>
-          <p class="results__text">voluptatem id, aperiam nobis. Voluptate illo nihil quibusdam necessitatibus, molestias non eaque ipsam quisquam explicabo officiis assum</p>
-        </a>
-      </li> -->
-    </ul>
-  </section>
+      <!-- <button class="btn search__random-btn">Random Article</button> -->
+      <a href="https://en.wikipedia.org/wiki/Special:Random" class="btn search__random-btn">Random Article</a>
+    </header>
+    
+    <section class="content">
+      <div id="loader">
+        <!-- <img src="img/loading.gif" alt=""> -->
+        <h3>loading...</h3>
+      </div>
+    
+      <ul class="results">
+        <li class="results__item">
+          <a class="results__link" href="http://#">
+            <h2 class="results__title">Link title</h2>
+            <p class="results__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit perspiciatis nulla voluptatem reprehenderit</p>
+          </a>
+        </li>
+        <li class="results__item">
+          <a class="results__link" href="http://#">
+            <h2 class="results__title">Link title</h2>
+            <p class="results__text">voluptatem id, aperiam nobis. Voluptate illo nihil quibusdam necessitatibus, molestias non eaque ipsam quisquam explicabo
+              officiis assum</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
 
   <!-- <footer class="made-by">
     <p class="made-by__text">Made with 🧠 by</p>
