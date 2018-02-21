@@ -8,13 +8,17 @@
   // grid-template-rows: min-content 1fr;
   // grid-gap: 2rem;
 
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  // justify-content: stretch;
+  // align-items: center;
 }
 
 .header {
+  flex: 1 1 30%;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22,10 +26,10 @@
 
   &--full-page {
     flex-direction: column;
-  justify-content: center;
+    justify-content: center;
   }
 }
 
-.content {
-  
+.results {
+  flex: 1 1 70%;
 }
