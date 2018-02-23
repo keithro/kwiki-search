@@ -32,4 +32,104 @@
 
 .results {
   flex: 1 1 70%;
+  max-width: 75rem;
+  overflow: scroll;
+
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    color: $color-grey-dark-1;
+    background-color: $color-grey-light-1;
+    text-decoration: none;
+    padding: 2.5rem 4rem;
+    margin: 1rem;
+    border-radius: .5rem;
+    transform: scale(.98);
+    transition: all .25s ease;
+
+    &:hover {
+      transform: translateY(-3px) scale(1);
+      box-shadow: 0 1rem 2rem rgba(#000,0.6);
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(-1px);
+      box-shadow: 0 .5rem 1rem rgba(#000,0.6);
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+  }
+  
+  &__text {
+    font-size: 1.5rem;
+
+  }
+}
+
+.search {
+
+  &__input {
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: $color-grey-dark-1;
+    background-color: $color-grey-light-1;
+    border: none;
+    padding: 1.5rem 4rem;
+    margin: 2rem 0;
+    border-radius: 100px;
+    // width: 90%;
+    transition: all .2s;
+
+    &:focus {
+      outline: none;
+      // width: 100%;
+      background-color: $color-grey-light-2;
+    }
+
+     // input placeholder text
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: $color-grey-dark-2;
+    }
+  }
+}
+
+.btn {
+  &, // for just the '.btn' class
+  &:link,
+  &:visited {
+    color: $color-grey-light-1;
+    font-size: 1.5rem;
+    // background-color: $primary;
+    background: linear-gradient(to bottom, $primary-light, $primary-dark);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    // font-size: $default-font-size;
+
+    // Changes to button elements
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(#000,0.6);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(#000,0.6);
+  }
 }

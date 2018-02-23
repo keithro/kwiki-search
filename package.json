@@ -4,7 +4,7 @@
   "description": "description",
   "main": "index.js",
   "scripts": {
-    "dev-serve": "webpack-dev-server",
+    "server": "webpack-dev-server",
     "dev-build": "webpack -d --watch",
     "prod-build": "webpack -p --env production"
   },
@@ -14,6 +14,7 @@
     "autoprefixer": "^7.1.6",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.7",
     "cssnano": "^3.10.0",

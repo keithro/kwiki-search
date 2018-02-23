@@ -1,7 +1,7 @@
 import 'normalize.css/normalize.css';
 import '../sass/main.scss';
 
-// import { wiki } from './wiki'; // fix issue with async function
+import { wiki } from './wiki';
 import { ui } from './ui';
 
 function showSearchState() {
@@ -10,7 +10,6 @@ function showSearchState() {
 
 function removeSearchState() {
   const results = document.querySelector('.results').children.length;
-  console.log(results);
 
   if (!results) {
     ui.changeState('clear');
@@ -22,7 +21,20 @@ function getResults(e) {
 
   if (inputText !== '') {
     wiki.getArticles(inputText)
-      .then(data => console.log(data))
+      .then((data) => {
+        if (data[1].length) {
+          const organizedData = data[1].map((title, i) => {
+            return {
+              title,
+              text: data[2][i],
+              url: data[3][i]
+            };
+          });
+          ui.showResults(organizedData);
+        } else {
+          ui.showAlert('No results found');
+        }
+      })
       .catch(err => console.log(err));
   } else {
     ui.clearResults();
