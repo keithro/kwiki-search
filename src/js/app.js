@@ -43,6 +43,12 @@ function getResults(e) {
   e.preventDefault();
 }
 
+function clearResults() {
+  ui.clearInput();
+  ui.clearResults();
+  removeSearchState();
+}
+
 // Hide results section on load
 document.addEventListener('DOMContentLoaded', removeSearchState);
 
@@ -54,3 +60,5 @@ document.querySelector('.search__input').addEventListener('blur', removeSearchSt
 
 // Search input listener
 document.querySelector('.search__input').addEventListener('keyup', getResults);
+
+document.querySelector('.search__clear-btn').addEventListener('click', clearResults);

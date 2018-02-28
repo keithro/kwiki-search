@@ -1,0 +1,33 @@
+.btn {
+  &, // for just the '.btn' class
+  &:link,
+  &:visited {
+    color: $color-grey-light-1;
+    font-size: 1.6rem;
+    // background-color: $primary;
+    background: linear-gradient(to bottom, $primary-light, $primary-dark);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+
+    // Changes to button elements
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(#000,0.6);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(#000,0.6);
+  }
+}

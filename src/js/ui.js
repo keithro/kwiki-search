@@ -1,18 +1,25 @@
 class UI {
   constructor() {
     this.header = document.querySelector('.header');
+    this.logo = document.querySelector('.logo');
+    this.clearBtn = document.querySelector('.search__clear-btn');
     this.results = document.querySelector('.results');
+    this.input = document.querySelector('.search__input');
   }
 
   changeState(state) {
     if (state === 'search') {
-      console.log('showing results section...');
-      document.querySelector('.results').style.display = 'flex';
+      // Search Steate
       this.header.classList.remove('header--full-page');
+      // this.logo.style.transform
+      this.clearBtn.style.display = 'block';
+      this.results.style.display = 'flex';
     } else {
-      console.log('hiding results section...');
-      document.querySelector('.results').style.display = 'none';
+      // Initial State
       this.header.classList.add('header--full-page');
+      // this.logo.style.transform
+      this.clearBtn.style.display = 'none';
+      this.results.style.display = 'none';
     }
   }
 
@@ -30,6 +37,10 @@ class UI {
 
   clearResults() {
     this.results.innerHTML = '';
+  }
+
+  clearInput() {
+    this.input.value = '';
   }
 
   // showAlert() {
