@@ -61,4 +61,5 @@ document.querySelector('.search__input').addEventListener('blur', removeSearchSt
 // Search input listener
 document.querySelector('.search__input').addEventListener('keyup', getResults);
 
+// Clear results listener
 document.querySelector('.search__clear-btn').addEventListener('click', clearResults);

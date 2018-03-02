@@ -4,12 +4,13 @@
   &:visited {
     color: $color-grey-light-1;
     font-size: 1.6rem;
-    // background-color: $primary;
+    font-weight: 400;
+    line-height: inherit;
     background: linear-gradient(to bottom, $primary-light, $primary-dark);
+    text-align: center;
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
-    display: block;
     border-radius: 10rem;
     transition: all .2s;
     position: relative;
@@ -30,4 +31,21 @@
     transform: translateY(-1px);
     box-shadow: 0 .5rem 1rem rgba(#000,0.6);
   }
+}
+
+.search__clear-btn {
+  flex-shrink: 0;
+}
+
+.search__random-btn {
+  display: none;
+
+  @media only screen and (min-width: 56.25em) { // 900px
+    display: block;
+  }
+}
+
+.header--full-page .search__random-btn {
+  display: block;
+  width: 35rem;
 }

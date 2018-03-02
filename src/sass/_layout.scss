@@ -1,32 +1,78 @@
 .container {
-  // display: grid;
-  // grid-template-columns:
-  //   [full-start] 1fr
-  //   [center-start] minmax(min-content, 2fr)
-  //   [center-end] 1fr
-  //   [full-end];
-  // grid-template-rows: min-content 1fr;
-  // grid-gap: 2rem;
-
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
-  // justify-content: stretch;
-  // align-items: center;
+
 }
 
 .header {
-  flex: 1 0 20%;
+  // padding: 2rem;
+  flex: 1 0 25rem;
 
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+
+  // display: grid;
+  // grid-template-columns: 
+  //   [start] 1fr
+  //   [center-start] 1fr
+  //   [center-end] 1fr
+  //   [end];
+  // grid-template-rows: 
+
+    & > * {
+      margin: 0;
+    }
+
+    & >*:not(:last-child) {
+      margin: 0 2.5rem 1.5rem 2.5rem;
+    }
+
+    & > *:first-child {
+      flex-shrink: 2;
+      align-self: center;
+      margin-bottom: 0rem;
+    }
+
+  @media only screen and (min-width: 43.755em) { // 700px
+    flex: 1 0 13rem;
+
+    flex-direction: row;
+    align-items: center;
+    
+    & > *,
+    & >*:not(:last-child) { // to override previous declaration
+      margin: 0 3rem 0 0;
+    }
+  }
 
   &--full-page {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    // display: grid;
+    // grid-template-columns:
+    //   [start] 1fr
+    //   [center-start] minmax(min-content, 2fr)
+    //   [center-end] 1fr
+    //   [end]
+    // grid-template-rows: min-content 1fr;
+    // grid-gap: 2rem;
+
+    & > * {
+      margin: 0;
+    }
+
+    & >*:not(:last-child) {
+      margin: 0 0 2.5rem 0;
+    }
+
+    & > *:first-child {
+      margin-bottom: 5rem;
+    }
   }
 
   &--full-page .logo {
@@ -36,13 +82,18 @@
 
 .results {
   flex: 3 1 80%;
-  max-width: 75rem;
   overflow: scroll;
   
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  // display: grid;
+  // grid-template-columns: 1fr minmax(min-content, 2fr) 1fr;
+  // grid-template-rows: min-content;
 
   &__item {
+    width: 95%;
     color: $color-grey-dark-1;
     background-color: $color-grey-light-1;
     text-decoration: none;
@@ -62,6 +113,14 @@
       outline: none;
       transform: translateY(-1px);
       box-shadow: 0 .5rem 1rem rgba(#000,0.6);
+    }
+
+    @media only screen and (min-width: 56.25em) { // 900px
+      width: 75%;
+    }
+
+    @media only screen and (min-width: 75em) { // 1200px
+      width: 65%;
     }
   }
 

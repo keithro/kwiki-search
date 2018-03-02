@@ -3,6 +3,7 @@ class UI {
     this.header = document.querySelector('.header');
     this.logo = document.querySelector('.logo');
     this.clearBtn = document.querySelector('.search__clear-btn');
+    this.randomBtn = document.querySelector('.search__random-btn');
     this.results = document.querySelector('.results');
     this.input = document.querySelector('.search__input');
   }
@@ -11,19 +12,18 @@ class UI {
     if (state === 'search') {
       // Search Steate
       this.header.classList.remove('header--full-page');
-      // this.logo.style.transform
       this.clearBtn.style.display = 'block';
+      this.randomBtn.textContent = 'Random';
       this.results.style.display = 'flex';
     } else {
       // Initial State
       this.header.classList.add('header--full-page');
-      // this.logo.style.transform
       this.clearBtn.style.display = 'none';
+      this.randomBtn.textContent = 'Random Article';
       this.results.style.display = 'none';
     }
   }
 
-  // Might have to change this because of how response data is formatted
   showResults(articles) {
     this.results.innerHTML = articles.reduce((output, article) => {
       return output += `

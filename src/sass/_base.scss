@@ -1,8 +1,4 @@
 // COLORS
-// $color-primary-light: #3F7B70;
-// $color-primary: #265A5C;
-// $color-primary-dark: #113C4A;
-
 $primary: #eb2f64;
 $primary-light: #FF3366;
 $primary-dark: #BA265D;
@@ -28,11 +24,15 @@ $color-grey-dark-2: #999;
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; // 1rem = 10px (10 / 16px default)
-
-  // @media only screen and (max-width: $bp-largest) {
-  //   font-size: 50%; // 1rem = 8px
-  // }
+  font-size: 50%; // 1rem = 8px
+  
+  @media only screen and (min-width:  37.55em) { // 600px
+    font-size: 50%; // 1rem = 8px
+  }
+  
+  @media only screen and (min-width: 56.25em) { // 900px
+    font-size: 62.5%; // 1rem = 10px (10 / 16px default)
+  }
 }
 
 body {
@@ -49,6 +49,6 @@ body {
 
 // highlighted text
 ::selection {
-  // background-color: $color-grey-light-1;
-  // color: $color-primary;
+  background-color: $primary-light;
+  color: $color-grey-light-1;
 }

@@ -2,19 +2,19 @@
 
   &__input {
     font-family: inherit;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: inherit;
+    line-height: inherit;
     color: $color-grey-dark-1;
     background-color: $color-grey-light-1;
     border: none;
     padding: 1.5rem 4rem;
-    margin-bottom: 2rem;
     border-radius: 100px;
-    // width: 90%;
+    flex-grow: 1;
     transition: all .2s;
 
     &:focus {
       outline: none;
-      // width: 100%;
       background-color: $color-grey-light-2;
     }
 
@@ -24,4 +24,9 @@
       color: $color-grey-dark-2;
     }
   }
+}
+
+.header--full-page .search__input {
+    flex-grow: 0;
+    width: 35rem;
 }
