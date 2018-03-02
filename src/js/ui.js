@@ -6,6 +6,7 @@ class UI {
     this.randomBtn = document.querySelector('.search__random-btn');
     this.results = document.querySelector('.results');
     this.input = document.querySelector('.search__input');
+    this.footer = document.querySelector('.made-by');
   }
 
   changeState(state) {
@@ -21,10 +22,13 @@ class UI {
       this.clearBtn.style.display = 'none';
       this.randomBtn.textContent = 'Random Article';
       this.results.style.display = 'none';
+      this.showFooter();
     }
   }
 
   showResults(articles) {
+    this.hideFooter();
+
     this.results.innerHTML = articles.reduce((output, article) => {
       return output += `
         <a class="results__item" href="${article.url}">
@@ -37,19 +41,20 @@ class UI {
 
   clearResults() {
     this.results.innerHTML = '';
+    this.showFooter();
   }
 
   clearInput() {
     this.input.value = '';
   }
 
-  // showAlert() {
+  hideFooter() {
+    this.footer.style.display = 'none';
+  }
 
-  // }
-
-  // clearAlert() {
-
-  // }
+  showFooter() {
+    this.footer.style.display = 'block';
+  }
 }
 
 export const ui = new UI();

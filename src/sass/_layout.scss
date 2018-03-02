@@ -3,11 +3,10 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-
+  
 }
 
 .header {
-  // padding: 2rem;
   flex: 1 0 25rem;
 
   display: flex;
@@ -130,5 +129,29 @@
   
   &__text {
     font-size: 1.5rem;
+  }
+}
+
+.made-by {
+  font-size: 1.4rem;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  bottom: 3rem;
+  transform: translateX(-50%);
+
+  &__text {
+    color: $color-grey-light-3;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $primary;
+    font-weight: 400;
+    letter-spacing: .2rem;
+
+    &:hover {
+      color: $primary-light;
+    }
   }
 }

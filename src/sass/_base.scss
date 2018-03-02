@@ -26,9 +26,9 @@ html {
   box-sizing: border-box;
   font-size: 50%; // 1rem = 8px
   
-  @media only screen and (min-width:  37.55em) { // 600px
-    font-size: 50%; // 1rem = 8px
-  }
+  // @media only screen and (min-width:  37.55em) { // 600px
+  //   font-size: 50%; // 1rem = 8px
+  // }
   
   @media only screen and (min-width: 56.25em) { // 900px
     font-size: 62.5%; // 1rem = 10px (10 / 16px default)
@@ -43,8 +43,6 @@ body {
   background: linear-gradient(to bottom, $secondary-light, $secondary-dark);
   background-size: cover;
   background-repeat: no-repeat;
-
-  min-height: 100vh; // for dev only
 }
 
 // highlighted text
