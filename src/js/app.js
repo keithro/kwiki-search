@@ -12,7 +12,7 @@ function removeSearchState() {
   const results = document.querySelector('.results').children.length;
 
   if (!results) {
-    ui.changeState('clear');
+    ui.changeState('initial');
   }
 }
 
