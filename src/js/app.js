@@ -30,6 +30,7 @@ function getResults(e) {
               url: data[3][i]
             };
           });
+          ui.hideFooter();
           ui.showResults(organizedData);
         } else {
           ui.showAlert('No results found');
@@ -38,6 +39,7 @@ function getResults(e) {
       .catch(err => console.log(err));
   } else {
     ui.clearResults();
+    ui.showFooter();
   }
 
   e.preventDefault();
@@ -46,6 +48,7 @@ function getResults(e) {
 function clearResults() {
   ui.clearInput();
   ui.clearResults();
+  ui.showFooter();
   removeSearchState();
 }
 

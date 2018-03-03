@@ -22,13 +22,10 @@ class UI {
       this.clearBtn.style.display = 'none';
       this.randomBtn.textContent = 'Random Article';
       this.results.style.display = 'none';
-      this.showFooter();
     }
   }
 
   showResults(articles) {
-    this.hideFooter();
-
     this.results.innerHTML = articles.reduce((output, article) => {
       return output += `
         <a class="results__item" href="${article.url}">
@@ -41,7 +38,6 @@ class UI {
 
   clearResults() {
     this.results.innerHTML = '';
-    this.showFooter();
   }
 
   clearInput() {
